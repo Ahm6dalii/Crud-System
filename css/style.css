@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "impact";
+  src: url(../fonts/impact.ttf);
+}
+@font-face {
+  font-family: "New Time Roman";
+  src: url(../fonts/times\ new\ roman.ttf);
+}
+
+h1 {
+  font-family: "impact";
+  font-size: 80px;
+  color: black;
+  letter-spacing: -3px;
+}
+p {
+  font-family: "New Time Roman";
+  font-size: 30px;
+  color: black;
+  line-height: 1.2;
+}
+.w-10{
+  width:20px ;
+}
+.btn {
+  --bs-btn-padding-x: 3rem;
+  --bs-btn-padding-y: 1rem;
+  --bs-btn-font-family: Arial;
+  --bs-btn-font-size: 0.8rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+}
+.btn-main {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: blue;
+  --bs-btn-border-color: blue;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: green;
+  --bs-btn-hover-border-color: green;
+  --bs-btn-border-color: black;
+  --bs-btn-hover-border-color: black;
+  border-radius: 0;
+}

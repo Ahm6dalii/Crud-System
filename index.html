@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qoutes App</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="w-50 m-auto">
+      <form class="pt-1 mt-5 mb-4">
+        <h2 class="fs-1 mb-3">Product Management System</h2>
+        <div class="mb-4">
+          <label for="productName">Product Name</label>
+          <input
+            type="text"
+            oninput="validationInput(this)"
+            name="productName"
+            id="productName"
+            class="form-control"
+          />
+          <div class="alert alert-danger d-none py-2 mt-1">
+            Name must begain at least with 2 character
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="productPrice">Product Price</label>
+          <input
+            type="number"
+            oninput="validationInput(this)"
+            name="productPrice"
+            id="productPrice"
+            class="form-control"
+           
+          />
+          <div class="alert alert-danger d-none py-2 mt-1">
+           price must between 10000$ and 500000$
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="productCategory">Product Category</label>
+          <input
+            type="text"
+            oninput="validationInput(this)"
+            list="plist"
+            name="productCategory"
+            id="productCategory"
+            class="form-control"
+            autocomplete="off"
+          />
+          <div class="alert alert-danger d-none py-2 mt-1">
+            catogery must be one form list
+          </div>
+          <datalist id="plist">
+            <option value="mobile"></option>
+            <option value="tv"></option>
+            <option value="clothes"></option>
+            <option value="labtop"></option>
+          </datalist>
+        </div>
+        <div class="mb-4">
+          <label for="productDescription">Product Description</label>
+          <input
+            type="text"
+            oninput="validationInput(this)"
+            name="productDescription"
+            id="productDescription"
+            class="form-control"
+          />
+          <div class="alert alert-danger d-none py-2 mt-1">
+           Description must contain at least 20 char
+          </div>
+        </div>
+
+        <button
+          onclick="AddProduct()"
+          id="myBtn"
+          type="button"
+          class="btn btn-outline-primary fs-5 py-2 px-3"
+        >
+          Add Product
+        </button>
+      </form>
+      <div>
+        <label for="searchProduct">Product search:</label>
+        <input
+          type="search"
+          name="searchProduct"
+          id="searchProduct"
+          class="form-control mb-5"
+          oninput="searchProduct()"
+        />
+      </div>
+
+      <table class="table">
+        <thead class="r">
+          <th>index</th>
+          <th>ProductName</th>
+          <th>ProductPrice</th>
+          <th>ProductCategory</th>
+          <th>ProductDescription</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
